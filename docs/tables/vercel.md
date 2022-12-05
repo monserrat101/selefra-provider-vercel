@@ -1,4 +1,4 @@
-# Provider: vercel
+# Provider: Vercel
 
 ## Latest Version 
 
@@ -11,7 +11,7 @@ v0.0.1
 # Install 
 
 ```
-selefre  provider install vercel
+selefra provider install vercel
 ```
 
 
