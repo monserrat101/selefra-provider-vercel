@@ -1,6 +1,6 @@
 module github.com/selefra/selefra-provider-vercel
 
-go 1.19
+go 1.18
 
 require (
 	github.com/chronark/vercel-go v0.0.0-20220428054107-b77d3f95740e
