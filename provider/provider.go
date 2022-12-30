@@ -2,6 +2,7 @@ package provider
 
 import (
 	"context"
+
 	"github.com/selefra/selefra-provider-vercel/constants"
 
 	"github.com/selefra/selefra-provider-sdk/provider"
@@ -20,13 +21,10 @@ func GetProvider() *provider.Provider {
 		TableList: GenTables(),
 		ClientMeta: schema.ClientMeta{
 			InitClient: func(ctx context.Context, clientMeta *schema.ClientMeta, config *viper.Viper) ([]any, *schema.Diagnostics) {
-				var vercelConfig vercel_client.Configs
+				var vercelConfig vercel_client.Config
 				err := config.Unmarshal(&vercelConfig)
 				if err != nil {
 					return nil, schema.NewDiagnostics().AddErrorMsg(constants.Analysisconfigerrs, err.Error())
-				}
-				if len(vercelConfig.Providers) == 0 {
-					vercelConfig.Providers = append(vercelConfig.Providers, vercel_client.Config{})
 				}
 
 				clients, err := vercel_client.NewClients(vercelConfig)
@@ -55,7 +53,7 @@ func GetProvider() *provider.Provider {
 #    team: # Team that queries will target`
 			},
 			Validation: func(ctx context.Context, config *viper.Viper) *schema.Diagnostics {
-				var vercelConfig vercel_client.Configs
+				var vercelConfig vercel_client.Config
 				err := config.Unmarshal(&vercelConfig)
 				if err != nil {
 					return schema.NewDiagnostics().AddErrorMsg(constants.Analysisconfigerrs, err.Error())
