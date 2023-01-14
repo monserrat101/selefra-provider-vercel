@@ -2,6 +2,7 @@ package provider
 
 import (
 	"context"
+	"os"
 
 	"github.com/selefra/selefra-provider-vercel/constants"
 
@@ -25,6 +26,22 @@ func GetProvider() *provider.Provider {
 				err := config.Unmarshal(&vercelConfig)
 				if err != nil {
 					return nil, schema.NewDiagnostics().AddErrorMsg(constants.Analysisconfigerrs, err.Error())
+				}
+
+				if vercelConfig.APIToken == "" {
+					vercelConfig.APIToken = os.Getenv("VERCEL_API_TOKEN")
+				}
+
+				if vercelConfig.APIToken == "" {
+					return nil, schema.NewDiagnostics().AddErrorMsg("missing APIToken in configuration")
+				}
+
+				if vercelConfig.Team == "" {
+					vercelConfig.Team = os.Getenv("VERCEL_TEAM")
+				}
+
+				if vercelConfig.Team == "" {
+					return nil, schema.NewDiagnostics().AddErrorMsg("missing Team in configuration")
 				}
 
 				clients, err := vercel_client.NewClients(vercelConfig)
