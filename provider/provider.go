@@ -64,10 +64,8 @@ func GetProvider() *provider.Provider {
 		},
 		ConfigMeta: provider.ConfigMeta{
 			GetDefaultConfigTemplate: func(ctx context.Context) string {
-				return `##  Optional, Repeated. Add an accounts block for every account you want to assume-role into and fetch data from.
-#accounts:
-#  - api_token: # An API token per https://vercel.com/support/articles/how-do-i-use-a-vercel-api-access-token.
-#    team: # Team that queries will target`
+				return `# api_token: <Your Vercel Api Token>
+# team: <Your Vercel Team>`
 			},
 			Validation: func(ctx context.Context, config *viper.Viper) *schema.Diagnostics {
 				var vercelConfig vercel_client.Config
