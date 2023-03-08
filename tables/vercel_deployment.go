@@ -77,12 +77,12 @@ func (x *TableVercelDeploymentGenerator) GetColumns() []*schema.Column {
 		table_schema_generator.NewColumnBuilder().ColumnName("name").ColumnType(schema.ColumnTypeString).Description("Name of the deployment.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("url").ColumnType(schema.ColumnTypeString).Description("URL of the deployment.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("state").ColumnType(schema.ColumnTypeString).Description("One of: BUILDING, ERROR, INITIALIZING, QUEUED, READY, CANCELED.").Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("created_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the deployment was created.").
+		table_schema_generator.NewColumnBuilder().ColumnName("created_at").ColumnType(schema.ColumnTypeString).Description("Time when the deployment was created.").
 			Extractor(column_value_extractor.StructSelector("Created")).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("creator").ColumnType(schema.ColumnTypeJSON).Description("Creator of the deployment.").Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("building_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when deployment started to build.").
+		table_schema_generator.NewColumnBuilder().ColumnName("building_at").ColumnType(schema.ColumnTypeString).Description("Time when deployment started to build.").
 			Extractor(column_value_extractor.StructSelector("BuildingAt")).Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("ready").ColumnType(schema.ColumnTypeTimestamp).Description("Time when deployment is ready to view.").
+		table_schema_generator.NewColumnBuilder().ColumnName("ready").ColumnType(schema.ColumnTypeString).Description("Time when deployment is ready to view.").
 			Extractor(column_value_extractor.StructSelector("Ready")).Build(),
 	}
 }

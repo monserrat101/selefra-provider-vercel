@@ -36,11 +36,11 @@ func GetProvider() *provider.Provider {
 					return nil, schema.NewDiagnostics().AddErrorMsg("missing APIToken in configuration")
 				}
 
-				if vercelConfig.Team == "" {
-					vercelConfig.Team = os.Getenv("VERCEL_TEAM")
+				if vercelConfig.TeamId == "" {
+					vercelConfig.TeamId = os.Getenv("VERCEL_TEAM_ID")
 				}
 
-				if vercelConfig.Team == "" {
+				if vercelConfig.TeamId == "" {
 					return nil, schema.NewDiagnostics().AddErrorMsg("missing Team in configuration")
 				}
 
@@ -65,7 +65,7 @@ func GetProvider() *provider.Provider {
 		ConfigMeta: provider.ConfigMeta{
 			GetDefaultConfigTemplate: func(ctx context.Context) string {
 				return `# api_token: <Your Vercel Api Token>
-# team: <Your Vercel Team>`
+# team_id: <Your Vercel Team id>`
 			},
 			Validation: func(ctx context.Context, config *viper.Viper) *schema.Diagnostics {
 				var vercelConfig vercel_client.Config

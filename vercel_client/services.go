@@ -17,8 +17,8 @@ func Connect(ctx context.Context, vercelConfig *Config) (*vercel.Client, error) 
 	if vercelConfig.APIToken != constants.Constants_3 {
 		apiToken = vercelConfig.APIToken
 	}
-	if vercelConfig.Team != constants.Constants_4 {
-		team = vercelConfig.Team
+	if vercelConfig.TeamId != constants.Constants_4 {
+		team = vercelConfig.TeamId
 	}
 
 	if apiToken == constants.Constants_5 {

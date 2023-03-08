@@ -93,13 +93,13 @@ func (x *TableVercelProjectGenerator) GetColumns() []*schema.Column {
 		table_schema_generator.NewColumnBuilder().ColumnName("output_directory").ColumnType(schema.ColumnTypeString).Description("Directory where output of the build will go.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("public_source").ColumnType(schema.ColumnTypeBool).Description("If true, the project is linked to a public source.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("serverless_function_region").ColumnType(schema.ColumnTypeString).Description("Region where serverless functions will be deployed.").Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("updated_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the project was last updated.").
+		table_schema_generator.NewColumnBuilder().ColumnName("updated_at").ColumnType(schema.ColumnTypeString).Description("Time when the project was last updated.").
 			Extractor(column_value_extractor.StructSelector("UpdatedAt")).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("name").ColumnType(schema.ColumnTypeString).Description("Name of the project.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("permissions").ColumnType(schema.ColumnTypeJSON).Description("Permissions settings.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("root_directory").ColumnType(schema.ColumnTypeString).Description("Root directory for the build process.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("build_command").ColumnType(schema.ColumnTypeString).Description("The build command for this project.").Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("created_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the project was created.").
+		table_schema_generator.NewColumnBuilder().ColumnName("created_at").ColumnType(schema.ColumnTypeString).Description("Time when the project was created.").
 			Extractor(column_value_extractor.StructSelector("CreatedAt")).Build(),
 	}
 }

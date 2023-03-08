@@ -22,6 +22,8 @@ func TestProvider_PullTable(t *testing.T) {
 	wk := constants.Constants_1
 
 	config := `
+api_token: LSQFa12BTUTUFBTtbPEBEss0
+team_id: team_aStoVJS23TVWbplpplzKTdGG
 `
 	myProvider := GetProvider()
 
