@@ -41,7 +41,7 @@ func GetProvider() *provider.Provider {
 				}
 
 				if vercelConfig.TeamId == "" {
-					return nil, schema.NewDiagnostics().AddErrorMsg("missing Team in configuration")
+					return nil, schema.NewDiagnostics().AddErrorMsg("missing Team id in configuration")
 				}
 
 				clients, err := vercel_client.NewClients(vercelConfig)
