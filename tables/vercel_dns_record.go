@@ -82,9 +82,9 @@ func (x *TableVercelDnsRecordGenerator) GetColumns() []*schema.Column {
 		table_schema_generator.NewColumnBuilder().ColumnName("name").ColumnType(schema.ColumnTypeString).Description("Name of the DNS record.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("id").ColumnType(schema.ColumnTypeString).Description("ID of the DNS record.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("priority").ColumnType(schema.ColumnTypeInt).Description("Priority of the DNS record.").Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("updated_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the DNS record was created.").
+		table_schema_generator.NewColumnBuilder().ColumnName("updated_at").ColumnType(schema.ColumnTypeString).Description("Time when the DNS record was created.").
 			Extractor(column_value_extractor.StructSelector("UpdatedAt")).Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("created_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the DNS record was created.").
+		table_schema_generator.NewColumnBuilder().ColumnName("created_at").ColumnType(schema.ColumnTypeString).Description("Time when the DNS record was created.").
 			Extractor(column_value_extractor.StructSelector("CreatedAt")).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("creator").ColumnType(schema.ColumnTypeString).Description("Creator of the DNS record.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("mx_priority").ColumnType(schema.ColumnTypeInt).Description("MX priority of the DNS record.").Build(),

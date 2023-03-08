@@ -7,8 +7,6 @@ import (
 )
 
 func main() {
-
 	myProvider := provider.GetProvider()
 	serve.Serve(myProvider.Name, myProvider)
-
 }

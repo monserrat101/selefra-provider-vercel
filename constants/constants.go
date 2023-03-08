@@ -3,7 +3,7 @@ package constants
 var (
 	Analysisconfigerrs                                           = "analysis config err: %s"
 	Notsupported                                                 = "not_supported"
-	Hostuserpostgrespasswordpassportdbnamepostgressslmodedisable = "host=127.0.0.1 user=postgres password=pass port=5432 dbname=postgres sslmode=disable"
+	Hostuserpostgrespasswordpassportdbnamepostgressslmodedisable = "host=127.0.0.1 user=postgres password=password port=5432 dbname=postgres sslmode=disable"
 	Providerpulltableerrors                                      = "provider pull table error: %s"
 	VERCELAPITOKEN                                               = "VERCEL_API_TOKEN"
 	VERCELTEAM                                                   = "VERCEL_TEAM"

@@ -59,7 +59,7 @@ func (x *TableVercelUserGenerator) GetExpandClientTask() func(ctx context.Contex
 
 func (x *TableVercelUserGenerator) GetColumns() []*schema.Column {
 	return []*schema.Column{
-		table_schema_generator.NewColumnBuilder().ColumnName("date").ColumnType(schema.ColumnTypeTimestamp).Description("Date when the user was created.").Build(),
+		table_schema_generator.NewColumnBuilder().ColumnName("date").ColumnType(schema.ColumnTypeString).Description("Date when the user was created.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("remote_caching").ColumnType(schema.ColumnTypeJSON).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("bio").ColumnType(schema.ColumnTypeString).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("billing").ColumnType(schema.ColumnTypeJSON).Build(),

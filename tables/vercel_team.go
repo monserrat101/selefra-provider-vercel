@@ -72,7 +72,7 @@ func (x *TableVercelTeamGenerator) GetExpandClientTask() func(ctx context.Contex
 func (x *TableVercelTeamGenerator) GetColumns() []*schema.Column {
 	return []*schema.Column{
 		table_schema_generator.NewColumnBuilder().ColumnName("slug").ColumnType(schema.ColumnTypeString).Description("Slug of the team.").Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("created").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the team was created.").Build(),
+		table_schema_generator.NewColumnBuilder().ColumnName("created").ColumnType(schema.ColumnTypeString).Description("Time when the team was created.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("platform_version").ColumnType(schema.ColumnTypeString).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("preview_deployment_suffix").ColumnType(schema.ColumnTypeJSON).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("resource_config").ColumnType(schema.ColumnTypeJSON).Build(),
@@ -89,7 +89,7 @@ func (x *TableVercelTeamGenerator) GetColumns() []*schema.Column {
 		table_schema_generator.NewColumnBuilder().ColumnName("profiles").ColumnType(schema.ColumnTypeJSON).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("creator_id").ColumnType(schema.ColumnTypeString).Description("ID of the user who created the team.").
 			Extractor(column_value_extractor.StructSelector("Creatorid")).Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("updated_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the team was last updated.").
+		table_schema_generator.NewColumnBuilder().ColumnName("updated_at").ColumnType(schema.ColumnTypeString).Description("Time when the team was last updated.").
 			Extractor(column_value_extractor.StructSelector("UpdatedAt")).Build(),
 	}
 }

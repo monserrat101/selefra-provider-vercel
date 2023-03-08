@@ -71,13 +71,13 @@ func (x *TableVercelDomainGenerator) GetExpandClientTask() func(ctx context.Cont
 
 func (x *TableVercelDomainGenerator) GetColumns() []*schema.Column {
 	return []*schema.Column{
-		table_schema_generator.NewColumnBuilder().ColumnName("config_verified_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the domain configuration was verified.").
+		table_schema_generator.NewColumnBuilder().ColumnName("config_verified_at").ColumnType(schema.ColumnTypeString).Description("Time when the domain configuration was verified.").
 			Extractor(column_value_extractor.StructSelector("ConfigVerifiedAt")).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("id").ColumnType(schema.ColumnTypeString).Description("ID of the domain.").
 			Extractor(column_value_extractor.StructSelector("Id")).Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("transferred_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the domain was created.").
+		table_schema_generator.NewColumnBuilder().ColumnName("transferred_at").ColumnType(schema.ColumnTypeString).Description("Time when the domain was created.").
 			Extractor(column_value_extractor.StructSelector("TransferredAt")).Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("txt_verified_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the domain was created.").
+		table_schema_generator.NewColumnBuilder().ColumnName("txt_verified_at").ColumnType(schema.ColumnTypeString).Description("Time when the domain was created.").
 			Extractor(column_value_extractor.StructSelector("TxtVerifiedAt")).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("cdn_enabled").ColumnType(schema.ColumnTypeBool).Description("If true, then the Content Delivery Network is enabled for this domain.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("name_servers").ColumnType(schema.ColumnTypeJSON).Description("Name servers for the domain.").Build(),
@@ -87,15 +87,15 @@ func (x *TableVercelDomainGenerator) GetColumns() []*schema.Column {
 		table_schema_generator.NewColumnBuilder().ColumnName("verification_record").ColumnType(schema.ColumnTypeString).Description("Verification record for the domain.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("verified").ColumnType(schema.ColumnTypeBool).Description("True if the domain is verified.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("renew").ColumnType(schema.ColumnTypeBool).Description("True if the domain should auto-renew.").Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("ns_verified_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the name server was verified.").
+		table_schema_generator.NewColumnBuilder().ColumnName("ns_verified_at").ColumnType(schema.ColumnTypeString).Description("Time when the name server was verified.").
 			Extractor(column_value_extractor.StructSelector("NsVerifiedAt")).Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("created_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the domain was created.").
+		table_schema_generator.NewColumnBuilder().ColumnName("created_at").ColumnType(schema.ColumnTypeString).Description("Time when the domain was created.").
 			Extractor(column_value_extractor.StructSelector("CreatedAt")).Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("expires_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the domain expires.").
+		table_schema_generator.NewColumnBuilder().ColumnName("expires_at").ColumnType(schema.ColumnTypeString).Description("Time when the domain expires.").
 			Extractor(column_value_extractor.StructSelector("ExpiresAt")).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("service_type").ColumnType(schema.ColumnTypeString).Description("Service provided by the domain, e.g. external.").Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("intended_name_servers").ColumnType(schema.ColumnTypeJSON).Description("Intended name servers for the domain.").Build(),
-		table_schema_generator.NewColumnBuilder().ColumnName("bought_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the domain was bought.").
+		table_schema_generator.NewColumnBuilder().ColumnName("bought_at").ColumnType(schema.ColumnTypeString).Description("Time when the domain was bought.").
 			Extractor(column_value_extractor.StructSelector("BoughtAt")).Build(),
 	}
 }

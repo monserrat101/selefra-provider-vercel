@@ -89,7 +89,7 @@ func (x *TableVercelSecretGenerator) GetExpandClientTask() func(ctx context.Cont
 
 func (x *TableVercelSecretGenerator) GetColumns() []*schema.Column {
 	return []*schema.Column{
-		table_schema_generator.NewColumnBuilder().ColumnName("created_at").ColumnType(schema.ColumnTypeTimestamp).Description("Time when the secret was created.").
+		table_schema_generator.NewColumnBuilder().ColumnName("created_at").ColumnType(schema.ColumnTypeString).Description("Time when the secret was created.").
 			Extractor(column_value_extractor.StructSelector("Created")).Build(),
 		table_schema_generator.NewColumnBuilder().ColumnName("team_id").ColumnType(schema.ColumnTypeString).Description("Unique identifier of the team the secret was created for.").
 			Extractor(column_value_extractor.WrapperExtractFunction(func(ctx context.Context, clientMeta *schema.ClientMeta, taskClient any, task *schema.DataSourcePullTask, row *schema.Row, column *schema.Column, result any) (any, *schema.Diagnostics) {
