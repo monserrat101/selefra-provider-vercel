@@ -210,8 +210,6 @@ github.com/jackc/puddle v1.3.0/go.mod h1:m4B5Dj62Y0fbyuIc15OsIqK0+JU8nkqQjsgx7dv
 github.com/jhump/protoreflect v1.6.0 h1:h5jfMVslIg6l29nsMs0D8Wj17RDVdNYti0vDN/PZZoE=
 github.com/jstemmer/go-junit-report v0.0.0-20190106144839-af01ea7f8024/go.mod h1:6v2b51hI/fHJwM22ozAgKL4VKDeJcHhJFhtBdhmNjmU=
 github.com/jstemmer/go-junit-report v0.9.1/go.mod h1:Brl9GWCQeLvo8nXZwPNNblvFj/XSXhF0NWZEnDohbsk=
-github.com/judell/vercel-go v0.1.4 h1:Ej9cpZxaUeqPBzrh/666hOvOxlffiKN5aGSmWlKYQt0=
-github.com/judell/vercel-go v0.1.4/go.mod h1:iR6NimkdzunLB85zLzzTKzTrQlBnhLcsgo1/wXaUTWU=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/konsorten/go-windows-terminal-sequences v1.0.2/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
@@ -273,10 +271,12 @@ github.com/rs/zerolog v1.13.0/go.mod h1:YbFCdg8HfsridGWAh22vktObvhZbQsZXe4/zB0OK
 github.com/rs/zerolog v1.15.0/go.mod h1:xYTKnLHcpfU2225ny5qZjxnj9NvkumZYjJHlAThCjNc=
 github.com/satori/go.uuid v1.2.0 h1:0uYX9dsZ2yD7q2RtLRtPSdGDWzjeM3TbMJP9utgA0ww=
 github.com/satori/go.uuid v1.2.0/go.mod h1:dA0hQrYB0VpLJoorglMZABFdXlWrHn1NEOzdhQKdks0=
-github.com/selefra/selefra-provider-sdk v0.0.16 h1:Hp7w2KH1e9jfVVhJuCKdqbN9KGQD8rquRiZOWYGG19M=
-github.com/selefra/selefra-provider-sdk v0.0.16/go.mod h1:L3qgSQnkxmxwL+Z1Z5E1vXzOnaQljOK2xm53HRaWbdU=
+github.com/selefra/selefra-provider-sdk v0.0.20 h1:dpuXSJ3kZVdDHLCpRZx6yRJzEmcXswWJKxVlNiiLs2M=
+github.com/selefra/selefra-provider-sdk v0.0.20/go.mod h1:o0/4RWphTrg78ja9oedg9EEMpE4A4y+DeVzlnkpnq1s=
 github.com/selefra/selefra-utils v0.0.2 h1:Z3cAmMoTr6XePiZJakRmLVi7CvMjZ4ypt8TO73M03F0=
 github.com/selefra/selefra-utils v0.0.2/go.mod h1:LPY6RNU12IniRH3xz7yS7xF10YH3emQ6NWrn6UuBjEk=
+github.com/selefra/vercel-go v0.0.3 h1:NVOLGMK0TRUXY3w/U3MfDnr7fANtpRQYf7vegec4c0s=
+github.com/selefra/vercel-go v0.0.3/go.mod h1:iR6NimkdzunLB85zLzzTKzTrQlBnhLcsgo1/wXaUTWU=
 github.com/shopspring/decimal v0.0.0-20180709203117-cd690d0c9e24/go.mod h1:M+9NzErvs504Cn4c5DxATwIqPbtswREoFCre64PpcG4=
 github.com/shopspring/decimal v1.2.0 h1:abSATXmQEYyShuxI4/vyW3tV1MrKAJzCZ/0zLUXYbsQ=
 github.com/shopspring/decimal v1.2.0/go.mod h1:DKyhrW/HYNuLGql+MJL6WCR6knT2jwCFRcu2hWCYk4o=

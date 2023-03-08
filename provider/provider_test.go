@@ -21,7 +21,8 @@ func TestProvider_PullTable(t *testing.T) {
 	os.Setenv(constants.SELEFRADATABASEDSN, constants.Hostuserpostgrespasswordpassportdbnamepostgressslmodedisable)
 	wk := constants.Constants_1
 
-	config := `provider:`
+	config := `
+`
 	myProvider := GetProvider()
 
 	Pull(myProvider, config, wk, constants.Constants_2)

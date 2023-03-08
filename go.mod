@@ -1,10 +1,10 @@
 module github.com/selefra/selefra-provider-vercel
 
-go 1.18
+go 1.19
 
 require (
 	github.com/chronark/vercel-go v0.0.0-20220428054107-b77d3f95740e
-	github.com/selefra/selefra-provider-sdk v0.0.16
+	github.com/selefra/selefra-provider-sdk v0.0.20
 	github.com/selefra/selefra-utils v0.0.2
 	github.com/spf13/viper v1.13.0
 )
@@ -62,4 +62,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/chronark/vercel-go => github.com/judell/vercel-go v0.1.4
+replace github.com/chronark/vercel-go => github.com/selefra/vercel-go v0.0.3
