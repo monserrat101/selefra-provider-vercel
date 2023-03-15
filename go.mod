@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/chronark/vercel-go v0.0.0-20220428054107-b77d3f95740e
-	github.com/selefra/selefra-provider-sdk v0.0.20
+	github.com/selefra/selefra-provider-sdk v0.0.21
 	github.com/selefra/selefra-utils v0.0.2
 	github.com/spf13/viper v1.13.0
 )
